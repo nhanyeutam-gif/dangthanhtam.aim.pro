@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĐẶNG THANH TÂM ✅ | Hỗ Trợ Kéo Tầm Free Fire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background: linear-gradient(180deg, #1c1208 0%, #120c06 100%); 
+            min-height: 100vh; color: #fff; overflow-x: hidden; padding-bottom: 100px; position: relative; 
+        }
+
+        .snow-container { position: fixed; inset: 0; pointer-events: none; z-index: 1; overflow: hidden; }
+        .snow {
+            position: absolute; top: -10px;
+            color: #fff; font-size: 1em;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0.3; }
+        }
+
+        .stars-bg { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+        .star-particle { position: absolute; background: #fff; border-radius: 50%; animation: twinkle 3s infinite alternate; }
+        @keyframes twinkle { 0% { opacity: 0.15; } 100% { opacity: 0.9; } }
+        .container { position: relative; z-index: 10; max-width: 420px; margin: 0 auto; padding: 20px 16px 30px; }
+
+        .top-header-block { background: rgba(35,22,10,0.7); border: 1px solid rgba(255,140,0,0.2); border-radius: 20px; padding: 24px 20px; margin-bottom: 20px; text-align: center; }
+        
+        .top-logo-brand { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 18px; }
+        .avatar-wrap {
+            position: relative; width: 64px; height: 64px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .avatar-glow-ring {
+            position: absolute; inset: -4px; border-radius: 50%;
+            background: conic-gradient(from 0deg, #ffb340, #ff8c00, #ff6a00, #ffb340);
+            animation: rotateRing 3s linear infinite;
+            z-index: 1;
+        }
+        .avatar-glow-ring-2 {
+            position: absolute; inset: -8px; border-radius: 50%;
+            background: conic-gradient(from 180deg, rgba(255,179,64,0.3), rgba(255,106,0,0.3), rgba(255,179,64,0.3));
+            animation: rotateRing 5s linear infinite reverse;
+            filter: blur(4px);
+        }
+        @keyframes rotateRing {
+            100% { transform: rotate(360deg); }
+        }
+        .avatar-inner {
+            position: relative; z-index: 2; width: 100%; height: 100%;
+            border-radius: 50%; background: linear-gradient(135deg, #b46e00, #ff9500);
+            padding: 3px; overflow: hidden;
+        }
+        .avatar-img {
+            width: 100%; height: 100%; border-radius: 50%;
+            object-fit: cover; display: block;
+        }
+
+        .top-brand-text { display: flex; align-items: center; gap: 6px; }
+        .top-brand-text h1 { font-size: 22px; font-weight: 800; color: #ffb340; }
+        .verified-badge { color: #4ade80; font-size: 18px; }
+        .top-sub-tag { display: flex; align-items: center; justify-content: center; gap: 10px; color: #ffb340; font-size: 15px; margin-bottom: 16px; }
+        .online-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.2); color: #4ade80; padding: 8px 18px; border-radius: 30px; font-size: 14px; font-weight: 500; margin-bottom: 16px; }
+        .online-dot { width: 10px; height: 10px; background: #4ade80; border-radius: 50%; animation: blink 2s infinite; }
+        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.4} }
+        .welcome-bar { background: rgba(255,140,0,0.08); border: 1px solid rgba(255,140,0,0.12); border-radius: 12px; padding: 10px 20px; color: #ffb340; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; }
+        .stats-card { background: rgba(30,20,10,0.5); border-radius: 24px; padding: 28px 20px; margin: 20px 0; border: 1px solid rgba(255,255,255,0.04); }
+        .stats-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px 16px; }
+        .stat-item { text-align: center; }
+        .stat-value { font-size: 32px; font-weight: 800; color: #ffb340; margin-bottom: 4px; }
+        .stat-label { font-size: 12px; color: #888; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; justify-content: center; gap: 4px; }
+        
+        .buyers-card { background: rgba(30,20,10,0.4); border-radius: 20px; padding: 18px; margin-bottom: 20px; border: 1px solid rgba(74,222,128,0.1); }
+        .buyers-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+        .buyers-title { display: flex; align-items: center; gap: 8px; color: #ccc; font-size: 14px; font-weight: 600; }
+        .buyers-title span { color: #ffb340; font-weight: 700; }
+        .buyers-list { display: flex; flex-direction: column; gap: 12px; max-height: 320px; overflow-y: auto; padding-right: 4px; }
+        .buyers-list::-webkit-scrollbar { width: 3px; }
+        .buyers-list::-webkit-scrollbar-thumb { background: rgba(255,179,64,0.3); border-radius: 3px; }
+        .buyer-row { display: flex; align-items: center; gap: 10px; animation: fadeInUp 0.4s ease-out; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .buyer-avatar { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #ff8c00, #ff6a00); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; flex-shrink: 0; }
+        .buyer-meta { flex: 1; min-width: 0; }
+        .buyer-name { font-weight: 600; font-size: 14px; display: flex; align-items: center; gap: 4px; }
+        .verified { color: #4ade80; font-size: 11px; }
+        .buyer-desc { font-size: 11px; color: #777; margin-top: 2px; }
+        .buyer-desc span { color: #ff8c00; font-weight: 600; }
+        .buyer-time { font-size: 11px; color: #555; flex-shrink: 0; white-space: nowrap; }
+
+        .section-block { background: rgba(35,22,10,0.7); border: 1px solid rgba(255,140,0,0.2); border-radius: 16px; padding: 16px 18px; margin-bottom: 14px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; transition: all 0.3s; user-select: none; }
+        .section-block:hover { border-color: rgba(255,140,0,0.5); background: rgba(50,30,12,0.7); }
+        .section-left { display: flex; align-items: center; gap: 12px; }
+        .section-icon { width: 40px; height: 40px; background: rgba(255,140,0,0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #ffb340; font-size: 18px; }
+        .section-title { font-size: 17px; font-weight: 700; color: #fff; }
+        .section-badge { background: rgba(255,140,0,0.18); color: #ffb340; font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-right: 8px; }
+        .section-arrow { color: #ffb340; transition: transform 0.3s ease; }
+        .section-arrow.open { transform: rotate(180deg); }
+        .products-container { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; margin-bottom: 16px; }
+        .products-container.open { max-height: 9999px; }
+
+        /* === CARD SẢN PHẨM === */
+        .product-card { 
+            background: linear-gradient(180deg, #291808 0%, #1A0F05 100%); 
+            border: 2px solid rgba(255,140,0,0.35); 
+            border-radius: 20px; 
+            padding: 20px; 
+            margin-bottom: 16px;
+        }
+        .product-card.blue-card { 
+            background: linear-gradient(180deg, #081829 0%, #050f1a 100%); 
+            border-color: rgba(59,130,246,0.4); 
+        }
+        .product-card.purple-card { 
+            background: linear-gradient(180deg, #1a0829 0%, #0f051a 100%); 
+            border-color: rgba(139,92,246,0.4); 
+        }
+        .product-card.orange-card { 
+            background: linear-gradient(180deg, #291808 0%, #1A0F05 100%); 
+            border-color: rgba(245,158,11,0.4); 
+        }
+        .prod-name { font-size: 22px; font-weight: 800; margin-bottom: 4px; color: #ffb340; }
+        .blue-card .prod-name { color: #60a5fa; }
+        .purple-card .prod-name { color: #a78bfa; }
+        .orange-card .prod-name { color: #fbbf24; }
+        .prod-sub { font-size: 14px; color: #888; margin-bottom: 14px; padding-left: 8px; border-left: 3px solid; }
+        .prod-features { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+        .feat-item { display: flex; align-items: flex-start; gap: 8px; font-size: 15px; color: #ccc; }
+        .feat-item i { margin-top: 2px; font-size: 14px; color: #4ade80; }
+        .blue-card .feat-item i { color: #60a5fa; }
+        .purple-card .feat-item i { color: #a78bfa; }
+        .orange-card .feat-item i { color: #fbbf24; }
+
+        .price-packs { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-bottom: 16px; }
+        .pack-item { background: rgba(255,255,255,0.04); border-radius: 10px; padding: 10px; text-align: center; border: 2px solid transparent; cursor: pointer; transition: all 0.2s; }
+        .pack-item.active { border-color: #ffb340; background: rgba(255,179,64,0.1); }
+        .blue-card .pack-item.active { border-color: #3b82f6; background: rgba(59,130,246,0.1); }
+        .purple-card .pack-item.active { border-color: #a78bfa; background: rgba(139,92,246,0.1); }
+        .orange-card .pack-item.active { border-color: #f59e0b; background: rgba(245,158,11,0.1); }
+        .pack-label { font-size: 12px; color: #888; margin-bottom: 4px; }
+        .pack-price { font-size: 16px; font-weight: 700; }
+        .pack-discount { font-size: 10px; color: #ff5555; margin-top: 2px; }
+
+        .price-display { display: flex; align-items: baseline; gap: 10px; padding: 14px 16px; background: rgba(255,255,255,0.03); border-radius: 12px; margin-bottom: 12px; }
+        .price-current { font-size: 28px; font-weight: 800; color: #fff; }
+        .price-original { font-size: 16px; color: #555; text-decoration: line-through; }
+        .price-discount { background: rgba(255,68,68,0.15); color: #ff5555; padding: 2px 10px; border-radius: 20px; font-size: 13px; font-weight: 700; }
+        .demo-note { display: flex; align-items: center; gap: 8px; padding: 12px 14px; background: rgba(255,140,0,0.08); border-radius: 10px; color: #ffb340; font-size: 14px; margin-bottom: 16px; }
+        .blue-card .demo-note { background: rgba(59,130,246,0.1); color: #93c5fd; }
+        .purple-card .demo-note { background: rgba(139,92,246,0.1); color: #c4b5fd; }
+        .orange-card .demo-note { background: rgba(245,158,11,0.1); color: #fcd34d; }
+        .buy-btn-full { 
+            width: 100%; padding: 14px; border: none; border-radius: 14px; 
+            background: linear-gradient(90deg, #ff8800, #ff5500); 
+            color: #fff; font-size: 17px; font-weight: 700; cursor: pointer; 
+            display: flex; align-items: center; justify-content: center; gap: 10px; 
+            transition: transform 0.2s;
+        }
+        .blue-card .buy-btn-full { background: linear-gradient(90deg, #3b82f6, #2563eb); }
+        .purple-card .buy-btn-full { background: linear-gradient(90deg, #8b5cf6, #7c3aed); }
+        .orange-card .buy-btn-full { background: linear-gradient(90deg, #f59e0b, #d97706); }
+        .buy-btn-full:active { transform: scale(0.98); }
+
+        .contact-block { background: rgba(25,35,25,0.5); border: 1px solid rgba(74,222,128,0.2); border-radius: 16px; padding: 20px 18px; margin-bottom: 20px; }
+        .contact-title { display: flex; align-items: center; gap: 8px; font-size: 18px; font-weight: 700; color: #4ade80; margin-bottom: 16px; }
+        .contact-link { text-decoration: none; color: inherit; display: block; }
+        .contact-item { display: flex; align-items: center; justify-content: space-between; padding: 14px 12px; background: rgba(255,255,255,0.03); border-radius: 12px; margin-bottom: 10px; cursor: pointer; transition: background 0.2s; }
+        .contact-item:hover { background: rgba(255,255,255,0.06); }
+        .contact-left { display: flex; align-items: center; gap: 12px; }
+        .contact-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+        .contact-info span:first-child { font-size: 13px; color: #999; display: block; }
+        .contact-info span:last-child { font-size: 15px; color: #fff; font-weight: 600; }
+        .contact-arrow { color: #888; font-size: 14px; }
+
+        .security-block { background: rgba(40,30,15,0.5); border: 1px solid rgba(255,179,64,0.15); border-radius: 16px; padding: 20px 18px; margin-bottom: 30px; }
+        .security-title { display: flex; align-items: center; gap: 8px; font-size: 18px; font-weight: 700; color: #ffb340; margin-bottom: 16px; }
+        .security-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+        .security-item i { color: #4ade80; margin-top: 2px; font-size: 14px; }
+        .security-item span { color: #ccc; font-size: 14px; line-height: 1.5; }
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(15,10,5,0.92); backdrop-filter: blur(10px); border-top: 1px solid rgba(255,140,0,0.1); padding: 10px 0 20px; z-index: 50; }
+        .nav-center { display: flex; justify-content: center; }
+        .nav-btn { width: 52px; height: 52px; background: rgba(255,140,0,0.15); border-radius: 14px; display: flex; align-items: center; justify-content: center; color: #ffb340; font-size: 22px; }
+
+        /* === MODAL THANH TOÁN MOMO === */
+        .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 200; display: none; align-items: flex-end; justify-content: center; }
+        .modal-overlay.active { display: flex; }
+        .modal-content { width: 100%; max-width: 420px; background: linear-gradient(180deg, #1A0F05 0%, #0F0904 100%); border-radius: 24px 24px 0 0; padding: 24px 20px 30px; max-height: 90vh; overflow-y: auto; }
+        .modal-close { text-align: right; margin-bottom: 10px; }
+        .modal-close i { color: #888; font-size: 20px; cursor: pointer; }
+        .modal-title { text-align: center; font-size: 20px; font-weight: 700; color: #ffb340; margin-bottom: 4px; }
+        .modal-subtitle { text-align: center; font-size: 14px; color: #888; margin-bottom: 20px; }
+        .qr-box { background: #fff; border-radius: 14px; padding: 20px; display: flex; justify-content: center; margin-bottom: 16px; }
+        .qr-box img { max-width: 260px; border-radius: 6px; }
+        .info-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .info-label { color: #888; font-size: 13px; }
+        .info-value { color: #ffb340; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 6px; }
+        .copy-btn { background: rgba(255,140,0,0.15); color: #ffb340; border: none; padding: 3px 8px; border-radius: 6px; font-size: 11px; cursor: pointer; }
+        .note-box { background: rgba(255,255,255,0.03); border-radius: 10px; padding: 14px; margin: 16px 0; font-size: 13px; color: #aaa; line-height: 1.6; }
+        .confirm-btn { width: 100%; background: linear-gradient(90deg, #ff8c00, #ff6a00); color: #fff; border: none; padding: 14px; border-radius: 12px; font-size: 15px; font-weight: 700; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="snow-container" id="snowContainer"></div>
+    <div class="stars-bg" id="starsContainer"></div>
+    <div class="container">
+        <!-- === HEADER === -->
+        <div class="top-header-block">
+            <div class="top-logo-brand">
+                <div class="avatar-wrap">
+                    <div class="avatar-glow-ring-2"></div>
+                    <div class="avatar-glow-ring"></div>
+                    <div class="avatar-inner">
+                        <img src="https://cdn.upanhlaylink.com/i/zLMR56q9.jpeg" alt="Đặng Thanh Tâm" class="avatar-img">
+                    </div>
+                </div>
+                <div class="top-brand-text">
+                    <h1>ĐẶNG THANH TÂM</h1>
+                    <i class="fa-solid fa-check-circle verified-badge" title="Đã xác minh"></i>
+                </div>
+            </div>
+            <div class="top-sub-tag"><i class="fa-solid fa-bolt"></i> Hỗ trợ kéo tầm · FreeFire <i class="fa-solid fa-bolt"></i></div>
+            <div class="online-badge"><div class="online-dot"></div> Online · Sẵn sàng hỗ trợ 24/7</div>
+            <div class="welcome-bar">CHÀO MỪNG BẠN ĐẾN VỚI CỬA HÀNG</div>
+            <div class="stats-card">
+                <div class="stats-grid">
+                    <div class="stat-item"><div class="stat-value" id="totalOrders">1.284+</div><div class="stat-label"><i class="fa-solid fa-box"></i> ĐƠN HÀNG</div></div>
+                    <div class="stat-item"><div class="stat-value">4.9⭐</div><div class="stat-label"><i class="fa-solid fa-star"></i> ĐÁNH GIÁ</div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- === SẢN PHẨM AIM - MẶC ĐỊNH ẨN === -->
+        <div class="section-block" onclick="toggleSection('aimSection')">
+            <div class="section-left"><div class="section-icon"><i class="fa-solid fa-crosshairs"></i></div><span class="section-title">SẢN PHẨM AIM</span></div>
+            <div style="display:flex;align-items:center"><span class="section-badge">3 SẢN PHẨM</span><i class="fa-solid fa-chevron-down section-arrow" id="aimArrow"></i></div>
+        </div>
+        <div class="products-container" id="aimSection">
+            <div class="product-card">
+                <h3 class="prod-name">AimLock</h3>
+                <p class="prod-sub" style="border-color:#ffb340">ANDROID • IOS</p>
+                <div class="prod-features">
+                    <div class="feat-item"><i class="fa-solid fa-check"></i> Hỗ Trợ Kéo Tầm</div>
+                    <div class="feat-item"><i class="fa-solid fa-check"></i> Kéo Tầm Dễ Dàng</div>
+                </div>
+                <div class="price-display">
+                    <span class="price-current">100.000₫</span>
+                    <span class="price-original">199.000₫</span>
+                    <span class="price-discount">-50%</span>
+                </div>
+                <div class="demo-note"><i class="fa-solid fa-shield-halved"></i> Demo: Có Thể Đi Phòng Và Rank Antiban</div>
+                <button class="buy-btn-full" onclick="openPayment('AimLock', 100000)">
+                    <i class="fa-solid fa-cart-shopping"></i> MUA NGAY →
+                </button>
+            </div>
+
+            <div class="product-card">
+                <h3 class="prod-name">AimBody</h3>
+                <p class="prod-sub" style="border-color:#ffb340">ANDROID • IOS</p>
+                <div class="prod-features">
+                    <div class="feat-item"><i class="fa-solid fa-check"></i> Xoá Máu Vàng</div>
+                    <div class="feat-item"><i class="fa-solid fa-check"></i> Bắn Vào Bụng Headshot</div>
+                </div>
+                <div class="price-display">
+                    <span class="price-current">123.456₫</span>
+                    <span class="price-original">250.000₫</span>
+                    <span class="price-discount">-51%</span>
+                </div>
+                <div class="demo-note"><i class="fa-solid fa-mobile-screen"></i> Demo: Antiban Phòng Không Nên Chơi Rank</div>
+                <button class="buy-btn-full" onclick="openPayment('AimBody', 123456)">
+                    <i class="fa-solid fa-cart-shopping"></i> MUA NGAY →
+                </button>
+            </div>
+
+            <div class="product-card">
+                <h3 class="prod-name">AimBot</h3>
+                <p class="prod-sub" style="border-color:#ffb340">ANDROID • IOS</p>
+                <div class="prod-features">
+                    <div class="feat-item"><i class="fa-solid fa-check"></i> Tự Động Ghim Tâm</div>
+                    <div class="feat-item"><i class="fa-solid fa-check"></i> Ghim Tâm Khi Ấn Bắn</div>
+                </div>
+                <div class="price-display">
+                    <span class="price-current">150.000₫</span>
+                    <span class="price-original">250.000₫</span>
+                    <span class="price-discount">-40%</span>
+                </div>
+                <div class="demo-note"><i class="fa-solid fa-mobile-screen"></i> Demo: Antiban Phòng Không Nên Chơi Rank</div>
+                <button class="buy-btn-full" onclick="openPayment('AimBot', 150000)">
+                    <i class="fa-solid fa-cart-shopping"></i> MUA NGAY →
+                </button>
+            </div>
+        </div>
+
+        <!-- === MENU - MẶC ĐỊNH ẨN === -->
+        <div class="section-block" onclick="toggleSection('menuSection')">
+            <div class="section-left"><div class="section-icon" style="background:rgba(59,130,246,0.15)"><i class="fa-solid fa-bars" style="color:#60a5fa"></i></div><span class="section-title">MENU</span></div>
+            <div style="display:flex;align-items:center"><span class="section-badge" style="background:rgba(59,130,246,0.15);color:#93c5fd">3 SẢN PHẨM</span><i class="fa-solid fa-chevron-down section-arrow" id="menuArrow"></i></div>
+        </div>
+        <div class="products-container" id="menuSection">
+            
+            <!-- Menu Migul iOS -->
+            <div class="product-card blue-card">
+                <h3 class="prod-name">MENU MIGUL IOS</h3>
+                <p class="prod-sub" style="border-color:#60a5fa">MENU ẨN LEO RANK</p>
+                <div class="prod-features">
+                    <div class="feat-item"><i class="fa-solid fa-check"></i> Có Tiếng Việt</div>
+                    <div class="feat-item"><i class="fa-solid fa-check"></i> Hỗ Trợ iOS 15-27</div>
+                    <div class="feat-item"><i class="fa-solid fa-check"></i> Nhiều Chức Năng Cao Cấp</div>
+                </div>
+                <div class="price-packs">
+                    <div class="pack-item active" onclick="selectPack(this, 80000, 'Menu Migul iOS', 'migul')">
+                        <div class="pack-label">NGÀY</div>
+                        <div class="pack-price">80.000₫</div>
+                        <div class="pack-discount">-20%</div>
+                    </div>
+                    <div class="pack-item" onclick="selectPack(this, 200000, 'Menu Migul iOS', 'migul')">
+                        <div class="pack-label">TUẦN</div>
+                        <div class="pack-price">200.000₫</div>
+                        <div class="pack-discount">-10%</div>
+                    </div>
+                    <div class="pack-item" onclick="selectPack(this, 450000, 'Menu Migul iOS', 'migul')">
+                        <div class="pack-label">THÁNG</div>
+                        <div class="pack-price">450.000₫</div>
+                        <div class="pack-discount">-10%</div>
+                    </div>
+                </div>
+                <div class="price-display">
+                    <span class="price-current" id="migulPrice">80.000₫</span>
+                    <span class="price-original">100.000₫</span>
+                    <span class="price-discount">-20%</span>
+                </div>
+                <div class="demo-note"><i class="fa-solid fa-mobile-screen"></i> Demo: Cài Qua Esing-Link Trực Tiếp</div>
+                <button class="buy-btn-full" id="migulBtn" onclick="openPayment('Menu Migul iOS - NGÀY', 80000)">
+                    <i class="fa-solid fa-cart-shopping"></i> MUA NGAY →
+                </button>
+            </div>
+
+            <!-- Menu Flork -->
+            <div class="product-card purple-card">
+                <h3 class="prod-name">Menu Flork</h3>
+                <p class="prod-sub" style="border-color:#a78bfa">SỬ DỤNG DỄ</p>
+                <div class="prod-features">
+                    <div class="feat-item"><i class="fa-solid fa-check"></i> Hỗ Trợ iOS 17.0 - 18.7.1 & iOS 26.0 - 26.0.1</div>
+                    <div class="feat-item"><i class="fa-solid fa-check"></i> Aimbot (có neck), Esp, Ẩn Hack</div>
+                    <div class="feat-item"><i class="fa-solid fa-check"></i> Aim Silent, Speed, Fast Fire, Ghost</div>
+                </div>
+                <div class="price-display">
+                    <span class="price-current">200.000₫</span>
+                    <span class="price-original">400.000₫</span>
+                    <span class="price-discount">-50%</span>
+                </div>
+                <div class="demo-note"><i class="fa-solid fa-mobile-screen"></i> Demo: Cài Qua Esing Hoặc Lonk Trực Tiếp</div>
+                <button class="buy-btn-full" onclick="openPayment('Menu Flork', 200000)">
+                    <i class="fa-solid fa-cart-shopping"></i> MUA NGAY →
+                </button>
+            </div>
+
+            <!-- Menu Ẩn Leo Rank -->
+            <div class="product-card orange-card">
+                <h3 class="prod-name">Menu Ẩn Leo Rank</h3>
+                <p class="prod-sub" style="border-color:#fbbf24">MENU ẨN LEO RANK</p>
+                <div class="prod-features">
+                    <div class="feat-item"><i class="fa-solid fa-check"></i> Hỗ Trợ Android 10-14</div>
+                    <div class="feat-item"><i class="fa-solid fa-check"></i> Aimbot, ESP, Speed</div>
+                    <div class="feat-item"><i class="fa-solid fa-check"></i> Không Cần Root</div>
+                </div>
+                <div class="price-packs">
+                    <div class="pack-item" onclick="selectPackAnLeo(this, 50000, 'NGÀY')">
+                        <div class="pack-label">NGÀY</div>
+                        <div class="pack-price">50.000₫</div>
+                        <div class="pack-discount">-42%</div>
+                    </div>
+                    <div class="pack-item active" onclick="selectPackAnLeo(this, 120000, 'TUẦN')">
+                        <div class="pack-label">TUẦN</div>
+                        <div class="pack-price">120.000₫</div>
+                        <div class="pack-discount">-50%</div>
+                    </div>
+                    <div class="pack-item" onclick="selectPackAnLeo(this, 250000, 'THÁNG')">
+                        <div class="pack-label">THÁNG</div>
+                        <div class="pack-price">250.000₫</div>
+                        <div class="pack-discount">-55%</div>
+                    </div>
+                </div>
+                <div class="price-display">
+                    <span class="price-current" id="anLeoPrice">120.000₫</span>
+                    <span class="price-original">240.000₫</span>
+                    <span class="price-discount">-50%</span>
+                </div>
+                <div class="demo-note"><i class="fa-solid fa-robot"></i> Demo: Cài đặt đơn giản, Antiban cao</div>
+                <button class="buy-btn-full" id="anLeoBtn" onclick="openPayment('Menu Ẩn Leo Rank - TUẦN', 120000)">
+                    <i class="fa-solid fa-cart-shopping"></i> MUA NGAY →
+                </button>
+            </div>
+        </div>
+
+        <!-- === LIÊN HỆ === -->
+        <div class="contact-block">
+            <div class="contact-title"><i class="fa-solid fa-headphones"></i> Liên Hệ Với Tôi</div>
+            <a href="https://m.me/tamthanh6886" target="_blank" class="contact-link">
+                <div class="contact-item">
+                    <div class="contact-left">
+                        <div class="contact-icon" style="background:rgba(24,119,242,0.15)">
+                            <i class="fa-brands fa-facebook-messenger" style="color:#0084ff"></i>
+                        </div>
+                        <div class="contact-info">
+                            <span>Chat với tôi</span>
+                            <span>m.me/tamthanh6886</span>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right contact-arrow"></i>
+                </div>
+            </a>
+        </div>
+
+        <!-- === AN TOÀN === -->
+        <div class="security-block">
+            <div class="security-title"><i class="fa-solid fa-shield-check"></i> An Toàn Khi Mua</div>
+            <div class="security-item"><i class="fa-solid fa-check-circle"></i><span>Không chia sẻ thông tin của bạn cho bên thứ ba</span></div>
+            <div class="security-item"><i class="fa-solid fa-check-circle"></i><span>Hỗ trợ 24/7 giải đáp mọi thắc mắc</span></div>
+            <div class="security-item"><i class="fa-solid fa-check-circle"></i><span>Đổi trả & hoàn tiền nếu có lỗi từ hệ thống</span></div>
+        </div>
+    </div>
+
+    <!-- === MODAL THANH TOÁN MOMO - ĐÃ CẬP NHẬT === -->
+    <div class="modal-overlay" id="paymentModal">
+        <div class="modal-content">
+            <div class="modal-close"><i class="fa-solid fa-xmark" onclick="closePayment()"></i></div>
+            <h3 class="modal-title" id="modalProductName">Thanh Toán Momo</h3>
+            <p class="modal-subtitle">Quét Mã QR hoặc chuyển khoản</p>
+            
+            <div class="qr-box">
+                <img src="https://cdn.upanhlaylink.com/i/BVlhskZc.jpeg" alt="QR Momo">
+            </div>
+            
+            <div class="info-row">
+                <span class="info-label">Sản phẩm</span>
+                <span class="info-value" id="payProductName">-</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Số tiền</span>
+                <span class="info-value" id="payAmount">0₫</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">STK Momo</span>
+                <span class="info-value">0383775506</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Tên tài khoản</span>
+                <span class="info-value">Cu Thi Chung</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Nội dung</span>
+                <span class="info-value" id="payNote">
+                    <span id="noteText">-</span>
+                    <button class="copy-btn" onclick="copyNote()">Sao chép</button>
+                </span>
+            </div>
+            
+            <div class="note-box">
+                <strong>📌 Lưu ý:</strong><br>
+                - Chuyển khoản đúng số tiền & nội dung hiển thị theo sản phẩm<br>
+                - Tên tài khoản: <strong>Cu Thi Chung</strong> - STK: <strong>0383775506</strong><br>
+                - Sau khi chuyển khoản vui lòng chờ xác nhận trong 5-15 phút<br>
+                - Hoặc gửi ảnh biên lai vào Messenger để được kích hoạt nhanh
+            </div>
+            
+            <button class="confirm-btn" onclick="closePayment()">Đã Thanh Toán ✅</button>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <div class="nav-center">
+            <div class="nav-btn"><i class="fa-solid fa-house"></i></div>
+        </div>
+    </div>
+
+    <script>
+        // === HIỆU ỨNG TUYẾT & SAO ===
+        const snowContainer = document.getElementById('snowContainer');
+        for(let i=0; i<60; i++){
+            const s = document.createElement('div');
+            s.className = 'snow';
+            s.style.left = Math.random()*100+'vw';
+            s.style.animationDuration = (3+Math.random()*5)+'s';
+            s.style.animationDelay = Math.random()*5+'s';
+            s.style.fontSize = (6+Math.random()*10)+'px';
+            snowContainer.appendChild(s);
+        }
+        const starsContainer = document.getElementById('starsContainer');
+        for(let i=0; i<100; i++){
+            const s = document.createElement('div');
+            s.className = 'star-particle';
+            s.style.left = Math.random()*100+'%';
+            s.style.top = Math.random()*100+'%';
+            s.style.width = s.style.height = (1+Math.random()*2)+'px';
+            s.style.animationDelay = Math.random()*3+'s';
+            starsContainer.appendChild(s);
+        }
+
+        // === MỞ/ĐÓNG MỤC ===
+        function toggleSection(id){
+            const sec = document.getElementById(id);
+            sec.classList.toggle('open');
+        }
+
+        // === CHỌN GÓI - MIGUL ===
+        function selectPack(el, price, baseName, type){
+            const parent = el.closest('.product-card');
+            parent.querySelectorAll('.pack-item').forEach(x=>x.classList.remove('active'));
+            el.classList.add('active');
+            let label = el.querySelector('.pack-label').textContent;
+            let fullName = `${baseName} - ${label}`;
+            document.getElementById(type+'Price').textContent = price.toLocaleString('vi-VN')+'₫';
+            document.getElementById(type+'Btn').setAttribute('onclick', `openPayment('${fullName}', ${price})`);
+        }
+
+        // === CHỌN GÓI - ẨN LEO RANK ===
+        function selectPackAnLeo(el, price, label){
+            const parent = el.closest('.product-card');
+            parent.querySelectorAll('.pack-item').forEach(x=>x.classList.remove('active'));
+            el.classList.add('active');
+            document.getElementById('anLeoPrice').textContent = price.toLocaleString('vi-VN')+'₫';
+            document.getElementById('anLeoBtn').setAttribute('onclick', `openPayment('Menu Ẩn Leo Rank - ${label}', ${price})`);
+        }
+
+        // === MỞ/ĐÓNG THANH TOÁN - NỘI DUNG THEO SẢN PHẨM ===
+        let currentNote = '';
+        function openPayment(name, price){
+            document.getElementById('modalProductName').textContent = name;
+            document.getElementById('payProductName').textContent = name;
+            document.getElementById('payAmount').textContent = price.toLocaleString('vi-VN')+'₫';
+            currentNote = 'ĐT ' + name.replace(/\s+/g, '').substring(0,15);
+            document.getElementById('noteText').textContent = currentNote;
+            document.getElementById('paymentModal').classList.add('active');
+        }
+        function closePayment(){
+            document.getElementById('paymentModal').classList.remove('active');
+        }
+        function copyNote(){
+            navigator.clipboard.writeText(currentNote);
+            alert('✅ Đã sao chép nội dung: ' + currentNote);
+        }
+    </script>
+</body>
+</html>
